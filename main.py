@@ -1,10 +1,11 @@
-def check(letter):
-  list_of_vowels = ['a', 'e', 'i', 'o', 'u']
-  if letter in list_of_vowels:
-      return True
-  else:
-      return False
-letters = ['u', 'a', 'q', 'c', 'i', 'd', 'z', 'p', 'e']
-filtered_object = filter(check, letters)
-filtered_list = list(filtered_object)
-print("The list of vowels is: ", filtered_list)
+import functools
+
+lis = [1, 3, 5, 6, 2]
+
+# using reduce to compute sum of list
+print("The sum of the list elements is : ", end="")
+print(functools.reduce(lambda a, b: a + b, lis))
+
+# using reduce to compute maximum element from list
+print("The maximum element of the list is : ", end="")
+print(functools.reduce(lambda a, b: a if a > b else b, lis))
