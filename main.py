@@ -1,12 +1,8 @@
-from array import array
-def array_sum(nums_arr):
-    sum_n = 0
-    for n in nums_arr:
-        sum_n += n
-    return sum_n
+def ten_numbers():
+    numbers = []
+    for i in range(1, 11):
+        numbers.append(i)
+    return numbers
 
-nums = array('i', [1, 2, 3, 4, 5, -15])
-print("Original array:",nums)
-nums_arr = list(map(int, nums))
-result = array_sum(nums_arr)
-print("Sum of all elements of the said array:")
+
+print(ten_numbers())
